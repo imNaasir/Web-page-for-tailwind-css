@@ -4,90 +4,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwindcss</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Trailwind css Design</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "bg-gradient-to-r from-[#F1216D] from-10% to-[#FA7028] to-90%",
+              secondry: "#ffffff"
+            },
+            fontFamily: {
+                'sans': ['Times New Roman', 'system-ui'],
+                'serif': ['ui-serif', 'Georgia'],
+                'mono': ['ui-monospace', 'SFMono-Regular', ],
+                'display': ['Oswald'],
+                'body': ['"Open Sans"'],
+              },
+            container: {
+              screens: {
+                sm: "640px",
+                md: "768px",
+                lg: "1024px",
+                xl: "1280px",
+    
+              },
+
+            }
+          }
+        }
+      }
+    </script>
+
 </head>
 <body>
-    <!-- section1 -->
-    <div class="w-screen h-screen  box-border overflow-hidden bg-contain bg-cover bg-no-repeat" style="background-image: url('./images/b-3.png');">
-        <div class="w-screen h-screen bg-[rgba(0,0,0,0.6)] relative">
-
-            <!-- header -->
-            <header class="flex justify-between itmes-center  itmes-center content-center pt-[15px] md:pt-[15px] border border-solid h-[90px] sm:h-[50px] md:[70px]">
-                <div class=" ml-[70px] sm:ml-[5px] border border-solid h-[70px] sm:h-[30px]  flex items-center "><img src="./images/logo.jpg" alt="" class="w-[220px] sm:w-[120px] md:w-[140px]"></div>
-                <nav class="flex justify-between   items-center w-[1130px] sm:w-[430px] md:w-[600px] mr-[60px] sm:mr-[5px] md:mr-[8px] p-0 md:py-[15px] border border-solid border-[red]">
-                    <ul class="flex space-x-[23px] sm:space-x-[4%]   text-white text-[40px] sm:text-[20px] md:text-[25px] itmes-center content-center leading-6 sm:leading-loose">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact_Us</a></li>
-                    </ul>
-                    <div class="space-x-2 sm:space-x-1">
-                        <button class="bg-[#2E3035] w-[6em] sm:w-[3em] md:w-[4.5em] text-[28px] sm:text-[15px] md:text-[20px] text-right  text-white 
-                                       cursor-pointer font-bold sm:font-[300] md:font-[500]"><i class='bx bx-search'></i></button>
-                        <button class="bg-[#2E3035] w-[6em] sm:w-[4em] md:w-[4.5em] md:text-[20px]   text-[28px] sm:text-[15px] text-white font-[500] md:font-[500] sm:font-[500]">Sign In</button>
-                        <button class="bg-[#2E3035] w-[6em] sm:w-[4em] md:w-[4.5em] md:text-[20px]   text-[28px] sm:text-[15px] text-white font-[500] md:font-[500] sm:font-[500]">Sign Up</button>
-                    </div>
-                </nav>
-            </header>
-            <!-- the best job  -->
-            <div class="absolute left-[50%] top-[60%] -translate-x-1/2 -translate-y-1/2 leading-[1] border border-solid h-[30vh] md:h-[33vh] w-[50%] md:w-[70%] sm:w-[70%]">
-                <h1 class="text-[white] text-[115px] md:text-[4.2em] sm:text-[3.3em] font-['Times New Roman'] font-semibold">Find The Best Job</h1>
-                <span class="text-[#A9B4BD] text-[35px] md:text-[20px] sm:text-[16px] font-['Times New Roman'] leading-[1]">5000 open job positions</span> <br> 
-                <span class="text-[#A9B4BD] text-[35px] md:text-[20px] sm:text-[16px] font-['Times New Roman'] leading-[1]">4000 conditions</span>
-                <div class="flex space-x-2 mt-1">
-                    <input type="text" class="w-[40%] md:w-[38%] sm:w-[35%] flex  placeholder:text-[30px] md:placeholder:text-[15px] sm:placeholder:text-[15px] placeholder: text-center p-[15px] md:p-[10px] sm:p-[5px] " placeholder="www.unuversityjob">
-                    <input type="text" class="w-[40%] md:w-[38%] sm:w-[35%] flex  placeholder:text-[30px] md:placeholder:text-[15px] sm:placeholder:text-[15px] placeholder: text-center p-[15px] md:p-[10px] sm:p-[5px] " placeholder="www.unuversityjob">                   
-                     <button class="bg-gradient-to-br from-[#F1216D] to-[#F87324] w-[2.2em] text-[25px] sm:text-[20px] text-center  text-white 
-                        cursor-pointer font-bold"><i class='bx bx-search'></i></button>
-                </div>
-                
-            </div>
+  <div class="w-screen h-screen max-sm:bg-cover box-border overflow-hidden bg-center  bg-cover bg-no-repeat" style="background-image: url('./images/b-3.png');">
+    <header class="relative top-0 w-full ">
+        <div class="container px-4 mx-auto max-sm:-ml-[15px] ">
+            <nav class="h-20 flex justify-between items-center max-sm:flex-col   max-md:w-s[100%] max-md:px-[0px] max-md:mx-[0px]">
+                <div><img src="./images/logo.png" class="w-[200px] max-sm:w-[250px] max-sm:mt-2" alt="logo"></div>
+                <ul class="flex gap-4 text-secondry font-[500] font-sans max-sm:gap-1 max-sm:mt-2 ">
+                  <li><a href="">Home</a></li>
+                  <li><a href="">About</a></li>
+                  <li><a href="">Contact_Us</a></li>
+                  <li class="bg-[#2E3035] w-[5em] max-sm:w-[2em] max-sm:text-center text-right  text-white font-[500]"><a href="" class=""><i class='bx bx-search'></i></a></li>
+                  <li class="bg-[#2E3035] w-[5em] max-sm:w-[3em] text-center text-white font-[500]"><a href="" class="">Sign In</a></li>
+                  <li class="bg-[#2E3035] w-[5em] text-center text-white font-[500]"><a href="" class="">Sign Up</a></li>
+              </ul>
+            </nav>
         </div>
-    </div>
-    <div class="h-[95vh] sm:h-[130vh] bg-gradient-to-r from-[#F1216D] from-10% to-[#FA7028] to-90% relative box-border">
-        <div class="border border-solid w-[93%] h-[85vh] sm:h-[95vh] relative top-[10%] left-[5%] right-[1.5%] overflow-hidden">
-            <h2 class="text-white text-[48px] sm:text-[35px] md:text-[35px] ">Popular Catagories</h2>
-            <div class="border border-solid border-indigo-600 w-[60%] sm:w-[65%]  h-[31vh] space-y-2  ">
-                <div class="bg-white inline-block px-[80px] sm:px-[25px] md:px-[35px] py-[20px] sm:py-[10px] md:py-[10px] text-[55px] sm:text-[30px] md:text-[30px] text-[#F96634] mr-[8px]"> <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
-                    bg-clip-text" "><i class="fi fi-ts-book-open-reader"></i></a> </div>
-                    <div class="bg-white inline-block px-[80px] sm:px-[25px] md:px-[35px] py-[20px] sm:py-[10px] md:py-[10px] text-[55px] sm:text-[30px] md:text-[30px] text-[#F96634] mr-[8px]"> <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
-                        bg-clip-text" "><i class="fi fi-ts-book-open-reader"></i></a> </div>
-                <div class="bg-white inline-block px-[80px] sm:px-[25px] md:px-[35px] py-[20px] sm:py-[10px] md:py-[10px] text-[55px] sm:text-[30px] md:text-[30px] text-[#F96634] mr-[8px]"> <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
-                    bg-clip-text" "><i class="fi fi-ts-book-open-reader"></i></a> </div>
-                <div class="bg-white inline-block px-[80px] sm:px-[25px] md:px-[35px] py-[20px] sm:py-[10px] md:py-[10px] text-[55px] sm:text-[30px] md:text-[30px] text-[#F96634] mr-[8px]"> <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
-                    bg-clip-text" "><i class="fi fi-ts-book-open-reader"></i></a> </div>
-                <div class="bg-white inline-block px-[80px] sm:px-[25px] md:px-[35px] py-[20px] sm:py-[10px] md:py-[10px] text-[55px] sm:text-[30px] md:text-[30px] text-[#F96634] mr-[8px]"> <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
-                    bg-clip-text" "><i class="fi fi-ts-book-open-reader"></i></a> </div>
-                <div class="bg-white inline-block px-[80px] sm:px-[25px] md:px-[35px] py-[20px] sm:py-[10px] md:py-[10px] text-[55px] sm:text-[30px] md:text-[30px] text-[#F96634] mr-[8px]"> <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
-                    bg-clip-text" "><i class="fi fi-ts-book-open-reader"></i></a> </div>
-                <div class="bg-white inline-block px-[80px] sm:px-[25px] md:px-[35px] py-[20px] sm:py-[10px] md:py-[10px] text-[55px] sm:text-[30px] md:text-[30px] text-[#F96634] mr-[8px]"> <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
-                    bg-clip-text" "><i class="fi fi-ts-book-open-reader"></i></a> </div>
-                <div class="bg-white inline-block px-[80px] sm:px-[25px] md:px-[35px] py-[20px] sm:py-[10px] md:py-[10px] text-[55px] sm:text-[30px] md:text-[30px] text-[#F96634] mr-[8px]"> <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
-                    bg-clip-text" "><i class="fi fi-ts-book-open-reader"></i></a> </div>
-            </div>
-            <div class="w-[300px] absolute right-0 top-[10em] right-[8em]"><img src="./images/logo.png" alt=""></div>
-            <div class="text-[25px] text-white pt-2" ><p>universal job your dream job</p>
-            <p class="pt-2 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente repudiandae 
-                cum quaerat corporis quisquam rerum magni assumenda at quo officiis iusto recusandae 
-                blanditiis aliquam, est quidem corrupti ipsa laboriosam atque. Lorem ipsum dolor sit amet consectetur,
-                 adipisicing elit. Quisquam hic, quibusdam commodi cum in unde ut dolores? Quisquam officiis qui iusto doloremque, 
-                fuga repellendus, dicta magni sequi dolore, impedit architecto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem veritatis quaerat earum quidem repellat dolorum facere a. Cupiditate pariatur voluptatem cum, 
-                expedita eum et quas adipisci inventore enim excepturi.</p></div>
-            <form class="pt-10">
-                <input type="text" placeholder="Enter Email" class="bg-white border border-none 
-                py-5 w-[25%] placeholder:pl-[17%] text-[30px] placeholder:text-[#696969] 
-                placeholder:font-[500] placeholder:font-[Times New Roman] placeholder:text-[35px] rounded-l-lg">
-                <button class="bg-gradient-to-t from-[#F1216D] from-1/2 to-[#FA7028] to-1/2
-                text-[30px] py-5 px-5 rounded-md -ml-[20px] text-white font-[400]">GET STARTED</button>
-                <BUtton class="bg-white text-[30px] py-5 px-4 rounded-md font-[500] ml-[17%]">
-                    <a href="" class="bg-gradient-to-t from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
-                                        bg-clip-text" ">Read More...</a>
-                    </BUtton>
-            </form>    
+    </header>
+    <div class="container absolute left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2  ">
+      <div class="flex justify-center flex-col items-center gap-4">
+
+        <div class="leading-[1] text-secondry"">
+
+          <h1 class="text-[5em]  max-sm:text-[2.6em]    lg:text-[5em] font-bold font-sans text-secondry flex flex-wrap">Find The Best Job</h1>
+          <p class="text-[2em] opacity-80 max-sm:text-[1.5em]  ">5000 open job positions</p>
+          <p class="text-[2em] opacity-80 max-sm:text-[1.5em]  ">4000 conditions</p>
+
+          <div class="flex gap-2 flex-wrap max-sm:flex-col max-sm:justify-center max-sm:items-center max-sm:py-2">
+            <input type="text" class="w-[40%] max-sm:w-[80%] flex  placeholder:text-[20px]
+               placeholder: text-center p-[15px] text-indigo-950 focus:outline-none" placeholder="www.unuversityjob"> 
+            <input type="text" class="w-[40%] max-sm:w-[80%] flex  placeholder:text-[20px]
+               placeholder: text-center p-[15px] text-indigo-950 focus:outline-none" placeholder="www.unuversityjob"> 
+            <button class="bg-gradient-to-br from-[#F1216D] to-[#F87324] w-[2.5em] max-sm:py-2 max-sm:w-[50%] max-sm:text-left px-2 text-[25px] sm:text-[20px] text-center  text-white 
+            cursor-pointer font-[500]"><i class='bx bx-search'></i></button>
+          </div>
+
         </div>
 
+      </div>
     </div>
+
+  </div>
+
+  <section class="py-0 h-auto w-screen bg-gradient-to-r from-[#F1216D] from-10% to-[#FA7028] to-90%">
+    <div class="container flex flex-col  w-[93%] h-auto max-sm:h-auto max-md:h-auto relative pt-[10%] left-[5%] right-[1.5%] ">
+
+      <h2 class="flex  text-white text-[48px]  max-sm:text-[18pxpx]  mx-md:text-[20px] ">Popular Catagories</h2>
+      <div class="container flex flex-wrap space-x-[150px] items-center max-sm:flex-col" >
+        <div  class="flex  w-[610px] max-sm:w-[350px] h-[35vh] max-sm:h-[27vh] gap-x-4 max-sm:gap-x-2 box-border flex-wrap gap-y-0">
+          <div class="bg-white w-[140px] max-sm:w-[100px] h-[15vh] max-sm:h-[8vh] flex justify-center items-center">
+            <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
+            bg-clip-text flex justify-center items-center  text-[40px] max-sm:text-[30px]" "><i class='bx bx-bullseye'></i></a> 
+          </div>
+          <div class="bg-white w-[140px] max-sm:w-[100px] h-[15vh] max-sm:h-[8vh] flex justify-center items-center">
+            <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
+            bg-clip-text flex justify-center items-center  text-[40px] max-sm:text-[30px]" "><i class='bx bx-bullseye'></i></a> 
+          </div>
+          <div class="bg-white w-[140px] max-sm:w-[100px] h-[15vh] max-sm:h-[8vh] flex justify-center items-center">
+            <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
+            bg-clip-text flex justify-center items-center  text-[40px] max-sm:text-[30px]" "><i class='bx bx-bullseye'></i></a> 
+          </div>
+          <div class="bg-white w-[140px] max-sm:w-[100px] h-[15vh] max-sm:h-[8vh] flex justify-center items-center">
+            <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
+            bg-clip-text flex justify-center items-center  text-[40px] max-sm:text-[30px]" "><i class='bx bx-bullseye'></i></a> 
+          </div>
+          <div class="bg-white w-[140px] max-sm:w-[100px] h-[15vh] max-sm:h-[8vh] flex justify-center items-center">
+            <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
+            bg-clip-text flex justify-center items-center  text-[40px] max-sm:text-[30px]" "><i class='bx bx-bullseye'></i></a> 
+          </div>
+          <div class="bg-white w-[140px] max-sm:w-[100px] h-[15vh] max-sm:h-[8vh] flex justify-center items-center">
+            <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
+            bg-clip-text flex justify-center items-center  text-[40px] max-sm:text-[30px]" "><i class='bx bx-bullseye'></i></a> 
+          </div>
+          <div class="bg-white w-[140px] max-sm:w-[100px] h-[15vh] max-sm:h-[8vh] flex justify-center items-center">
+            <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
+            bg-clip-text flex justify-center items-center  text-[40px] max-sm:text-[30px]" "><i class='bx bx-bullseye'></i></a> 
+          </div>
+          <div class="bg-white w-[140px] max-sm:w-[100px] h-[15vh] max-sm:h-[8vh] flex justify-center items-center">
+            <a href="" class="bg-gradient-to-r from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
+            bg-clip-text flex justify-center items-center  text-[40px] max-sm:text-[30px]" "><i class='bx bx-bullseye'></i></a> 
+          </div>
+        </div>
+
+        <div class="max-sm:flex max-sm:flex-col max-sm:relative max-sm:right-[5em] max-sm:pt-4"><img src="./images/logo.png" alt=""  class="w-[400px]"></div>
+      </div>
+
+      <div>
+        <div class="text-[25px] text-white pt-2" ><p class=" max-sm:text-[16px max-md:text-[20px]">universal job your dream job</p>
+          <p class="pt-2 max-sm:text-[16px] md:text-[20px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente repudiandae 
+              cum quaerat corporis quisquam rerum magni assumenda at quo officiis iusto recusandae 
+              blanditiis aliquam, est quidem corrupti ipsa laboriosam atque. Lorem ipsum dolor sit amet consectetur,
+               adipisicing elit. Quisquam hic, quibusdam commodi cum in unde ut dolores? Quisquam officiis qui iusto doloremque, 
+              fuga repellendus, dicta magni sequi dolore, impedit architecto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt exercitationem veritatis quaerat earum quidem repellat dolorum facere a. Cupiditate pariatur voluptatem cum, 
+              expedita eum et quas adipisci inventore enim excepturi.</p>
+          </div>
+      </div>
+      <form class="py-10 flex items-center ">
+        <div class="max-md:flex-row">
+          <input type="text" placeholder="Enter Email" class="bg-white border border-none  focus:outline-none
+          py-5 max-sm:py-2 max-md:py-1 w-[60%] max-sm:w-[40%] max-md:w-[40%] placeholder:pl-[18%] text-[30px] max-sm:text-[20px] placeholder:text-[#696969] 
+          placeholder:font-[500] placeholder:font-[Times New Roman] placeholder:text-[35px] max-sm:placeholder:text-[20px] max-md:placeholder:text-[15px] rounded-l-lg">
+          <button class="bg-gradient-to-t from-[#F1216D] from-1/2 to-[#FA7028] to-1/2 max-sm:w-[40%]
+          text-[30px] max-sm:text-[13px] py-5 max-sm:py-[17px] px-5 sm:px-4 rounded-md -ml-[20px] max-sm:-ml-[5px]
+           text-white font-[400] sm:font-[500]">GET STARTED</button>
+        </div>
+        <div>
+          <BUtton class="bg-white text-[30px] max-sm:text-[20px] py-5 max-sm:py-2  px-5 sm:px-4 rounded-md ml-[8em] max-sm:-ml-[5px] w-[55%] max-sm:w-[120%]
+          text-white font-[400] sm:font-[500]">
+            <a href="" class="bg-gradient-to-t from-[#F1216D] from-30% to-[#FA7028] to-70% text-transparent
+                                bg-clip-text" ">Read More...</a>
+            </BUtton>
+        </div>
+
+    </form>
+    </div>
+
+    
+
+
+
+  </section>
+    
 </body>
 </html>
